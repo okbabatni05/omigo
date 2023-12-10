@@ -1,69 +1,47 @@
-# Omegle Clone
+<p align="center"><img width="480" alt="Omigo" src="http://i.imgur.com/0Rjl4RZ.png"></p>
 
-![Omegle Clone Thumnail](https://github.com/subhajit20/omegle-clone/assets/99127578/5e27c891-1334-4871-b7a7-c0fbb0139ae1)
+<p align="center"><b>A mobile compatible anonymous random chat using socket.io and WebRTC</b></p>
 
-## Getting Started
+## Screenshots
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgnuns%2Fomigo.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgnuns%2Fomigo?ref=badge_shield)
 
-Start Installation
+<img width="200" alt="A-Frame" src="http://i.imgur.com/2cmHx3p.png">
+<img src="http://i.imgur.com/18tD8BW.png">
 
-## Run Locally
+## Building
+Omigo consists of two parts: the server, which establishes and control the connections between peers, and the client, the front-end user interface.
 
-Clone the project
+#### Building the client
 
-```bash
-  git clone https://github.com/your-account/fullstack-video-call-web-app.git
+```sh
+$ npm install -g gulp
+$ git clone https://github.com/gnuns/omigo
+$ cd omigo/client
+$ npm install
+# nano client/src/js/app.js # update serverURI with your serverURI (default is http://localhost:3000)
+$ gulp build # will build on the dist/ folder
 ```
 
-Go to the project directory
+#### Building the server
 
-```bash
-  cd omegle-clone
+```sh
+$ git clone https://github.com/gnuns/omigo
+$ cd omigo/server
+$ npm install
+$ npm start # check the server/config.json file
 ```
 
-[Linux](https://docs.docker.com/desktop/install/linux-install/=)
-[Mac](https://docs.docker.com/desktop/install/mac-install/)
-[ Windows ](https://docs.docker.com/desktop/install/windows-install/)
+## Features
+- [x] Text chat
+- [x] Video chat
+- [x] Mobile compatibility
+- [ ] Mode switch button (text/video)
+- [ ] Multi-language
+- [ ] 'Stranger is typing...'
 
-```
-  docker-compose up
-```
+## License
 
-#### If you do not have docker installed then setup manually mentioned below
+This program is free software and is distributed under an [MIT License](LICENSE).
 
-Go to backend folder
 
-```bash
-  cd ./backend
-```
-
-Install dependencies
-
-```
- npm install
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
-
-Go to frontend folder
-
-```bash
-  cd ./frontend
-```
-
-Install dependencies
-
-```
- npm install
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
-
-Now You are good to go :)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgnuns%2Fomigo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgnuns%2Fomigo?ref=badge_large)
